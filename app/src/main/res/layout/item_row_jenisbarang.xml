@@ -13,6 +13,6 @@
         android:layout_marginBottom="4dp"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:text="Name" />
+        tools:text="Aulia Indah Novianti Putri" />
 
 </LinearLayout>

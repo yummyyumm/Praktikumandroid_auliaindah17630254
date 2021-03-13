@@ -1,5 +1,6 @@
 package com.example.praktikumandroid_auliaindah17630254.ui.jenisbarang
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,7 +16,7 @@ class JenisbarangActivity : AppCompatActivity() {
     private val viewModel: JenisbarangViewModel by lazy {
         ViewModelProvider(this).get(JenisbarangViewModel::class.java)
     }
-
+    //aulia indah novianti putri_17630254
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityJenisbarangBinding.inflate(layoutInflater)
@@ -26,9 +27,14 @@ class JenisbarangActivity : AppCompatActivity() {
         binding.progressBarJenisbarang.visibility = View.VISIBLE
 
         getListJenisbarang()
+//aulia indah novianti putri_17630254
+        binding.btTambahJenisbarang.setOnClickListener{
+            val intent = Intent(this, JenisbarangPostActivity::class.java)
+            startActivity(intent)
+        }
 
     }
-
+    //aulia indah novianti putri_17630254
     private fun getListJenisbarang() {
         viewModel.response.observe(this, {
             binding.progressBarJenisbarang.visibility = View.INVISIBLE
